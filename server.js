@@ -15,7 +15,7 @@ app.post('/weather', async (req, res) => {
         const zipcode = req.body.zip;
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zipcode},us&units=imperial&appid=${process.env.OPENWEATHER_API_KEY}`);
         const weatherData = await response.json();
-        res.redirect('/weather/show', { weatherData });
+        res.render('weather/show.ejs', { weatherData });
     } catch (err) {
         console.log(err);
         res.redirect('/');

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Weather</title>
+</head>
+
+<body>
+    <h1>Current Weather for <%= weatherData.name %></h1>
+    <p>It is now <%= Math.round(weatherData.main.temp) %>°F.</p>
+    <p>The sky condition is <%= weatherData.weather[0].main %>.</p>
+    <a href="/">Back</a>
+</body>
+
+</html>
